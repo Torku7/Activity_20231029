@@ -14,7 +14,10 @@ class ThirdActivity : AppCompatActivity() {
 
         val receivedMessage = intent.getStringExtra("message")
 
-        binding.txtMessage.text = receivedMessage
+        val receivedNumber = intent.getIntExtra("number", -1)
+
+        binding.txtMessage.text = "전달 문구 : ${receivedMessage}\n 전달 숫자 : ${receivedNumber}"
+
 
     }
 }

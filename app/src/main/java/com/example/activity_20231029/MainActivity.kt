@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
             myIntent.putExtra("message", inputMessage)
 
+            val inputNumber = binding.edtNumber.text.toString().toInt()
+
+            myIntent.putExtra("number", inputNumber)
+
             startActivity(myIntent)
         }
     }
