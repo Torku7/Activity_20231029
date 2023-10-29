@@ -11,5 +11,10 @@ class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_third)
+
+        val receivedMessage = intent.getStringExtra("message")
+
+        binding.txtMessage.text = receivedMessage
+
     }
 }
